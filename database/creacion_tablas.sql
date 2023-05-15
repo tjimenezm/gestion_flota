@@ -1,5 +1,8 @@
 -- gestion_flota.login definition
 -- gestion_flota.perfil definition
+
+drop TABLE if exists `vehiculo`;
+drop TABLE if exists `planificacion`;
 drop TABLE if exists `conductor`;
 drop TABLE if exists `empleado`;
 drop TABLE if exists `login`;
@@ -49,6 +52,38 @@ CREATE TABLE if not exists `conductor` (
   `empleado_id` int(11) REFERENCES empleado(id_empleado),
   `tipo_licencia` varchar(500) not null,
   `numero_licencia` varchar(500) not null,
-  `fecha_vencimiento` date not null,
+  `fecha_vencimiento` datetime not null,
   PRIMARY KEY (`id_conductor`)  
+);
+
+CREATE TABLE if not exists `planificacion` (
+  `id_planificacion` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `conductor_id` int(11) REFERENCES empleado(id_empleado),
+  `fecha_creacion` datetime,
+  `fecha_planificacion` datetime,
+  `hora_salida` time,
+  `hora_retorno` time,
+  `estado` varchar(50),
+  `origen` varchar(100),
+  `destino` varchar(100),
+  PRIMARY KEY (`id_planificacion`)  
+);
+
+CREATE TABLE if not exists `vehiculo` (
+  `id_vehiculo` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `patente` varchar(10),
+  `numero_motor` varchar(30),
+  `fecha_revision_tecnica` datetime,
+  `marca` varchar(30),
+  `anio` int(4),
+  `modelo` varchar(50),
+  `consecionario` varchar(100),
+  `aseguradora` varchar(100),
+  `poliza` varchar(30),
+  `fecha_poliza` datetime,
+  `fecha_ingreso` datetime,
+  `fecha_baja` datetime,
+  `tipo` varchar(10),
+  `estado` varchar(10),
+  PRIMARY KEY (`id_vehiculo`)  
 );
