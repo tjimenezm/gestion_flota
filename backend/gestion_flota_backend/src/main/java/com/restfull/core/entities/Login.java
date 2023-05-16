@@ -1,65 +1,72 @@
 package com.restfull.core.entities;
 
 public class Login {
-	public Login() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    private Long idLogin;
 
-	private long idLogin;
-	private String usuario;
-	private String password;
-	private long perfil_id;
-	private long persona_id;
+    private String usuario;
 
-	  public Login(long id_login, String usuario, String password, long perfil_id, long persona_id) {
-		super();
-		this.idLogin = id_login;
-		this.usuario = usuario;
-		this.password = password;
-		this.perfil_id = perfil_id;
-		this.persona_id = persona_id;
-	}
+    private String password;
 
-	public long getId_login() {
-		return idLogin;
-	}
+    private int perfilId;
 
-	public void setIdLogin(long idLogin) {
-		this.idLogin = idLogin;
-	}
+    private int personaId;
 
-	public String getUsuario() {
-		return usuario;
-	}
+    // Constructor empty
+    public Login() {
+    }
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
+    // Constructor parameters
+    public Login(Long idLogin, String usuario, String password, int perfilId, int personaId) {
+        this.idLogin = idLogin;
+        this.usuario = usuario;
+        this.password = password;
+        this.perfilId = perfilId;
+        this.personaId = personaId;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    // Getters y setters
+    public Long getIdLogin() {
+        return idLogin;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setIdLogin(Long idLogin) {
+        this.idLogin = idLogin;
+    }
 
-	public long getPerfil_id() {
-		return perfil_id;
-	}
+    public String getUsuario() {
+        return usuario;
+    }
 
-	public void setPerfil_id(long perfil_id) {
-		this.perfil_id = perfil_id;
-	}
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
 
-	public long getPersona_id() {
-		return persona_id;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setPersona_id(long persona_id) {
-		this.persona_id = persona_id;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getPerfilId() {
+        return perfilId;
+    }
+
+    public void setPerfilId(int perfilId) {
+        this.perfilId = perfilId;
+    }
+
+    public int getPersonaId() {
+        return personaId;
+    }
+
+    public void setPersonaId(int personaId) {
+        this.personaId = personaId;
+    }
+
+	public Login orElse(Object object) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-	
-	  
 }

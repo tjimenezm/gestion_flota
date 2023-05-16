@@ -1,17 +1,17 @@
 package com.restfull.core.entities;
 
 public class Cliente {
-    private int idCliente;
+    private Long idCliente;
     private int personaId;
     private String razonSocial;
-    private int direccionId;
+    private Long direccionId;
 
     // Constructor vacío
     public Cliente() {
     }
 
     // Constructor con parámetros
-    public Cliente(int idCliente, int personaId, String razonSocial, int direccionId) {
+    public Cliente(Long idCliente, int personaId, String razonSocial, Long direccionId) {
         this.idCliente = idCliente;
         this.personaId = personaId;
         this.razonSocial = razonSocial;
@@ -19,11 +19,11 @@ public class Cliente {
     }
 
     // Getters y setters
-    public int getIdCliente() {
+    public Long getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(Long idCliente) {
         this.idCliente = idCliente;
     }
 
@@ -43,11 +43,11 @@ public class Cliente {
         this.razonSocial = razonSocial;
     }
 
-    public int getDireccionId() {
+    public Long getDireccionId() {
         return direccionId;
     }
 
-    public void setDireccionId(int direccionId) {
+    public void setDireccionId(Long direccionId) {
         this.direccionId = direccionId;
     }
 }
