@@ -21,7 +21,7 @@ public class LoginRepository {
 		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
 		rows.forEach(row -> {
 			Login login = new Login();
-			login.setId_login((Long) row.get("id_login"));
+			login.setIdLogin((Long) row.get("id_login"));
 			login.setUsuario((String) row.get("usuario"));
 			loginList.add(login);
 		});

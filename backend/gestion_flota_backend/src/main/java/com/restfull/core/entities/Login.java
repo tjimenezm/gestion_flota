@@ -6,15 +6,15 @@ public class Login {
 		// TODO Auto-generated constructor stub
 	}
 
-	private long id_login;
-	  private String usuario;
-	  private String password;
-	  private long perfil_id;
-	  private long persona_id;
+	private long idLogin;
+	private String usuario;
+	private String password;
+	private long perfil_id;
+	private long persona_id;
 
 	  public Login(long id_login, String usuario, String password, long perfil_id, long persona_id) {
 		super();
-		this.id_login = id_login;
+		this.idLogin = id_login;
 		this.usuario = usuario;
 		this.password = password;
 		this.perfil_id = perfil_id;
@@ -22,11 +22,11 @@ public class Login {
 	}
 
 	public long getId_login() {
-		return id_login;
+		return idLogin;
 	}
 
-	public void setId_login(long id_login) {
-		this.id_login = id_login;
+	public void setIdLogin(long idLogin) {
+		this.idLogin = idLogin;
 	}
 
 	public String getUsuario() {
