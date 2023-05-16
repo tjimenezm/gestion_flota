@@ -33,7 +33,7 @@ CREATE TABLE if not exists `persona` (
   `run` int(10) DEFAULT NULL,
   `dv` varchar(1) DEFAULT NULL,
   `nombre` varchar(100) DEFAULT NULL,
-  `primer_pellido` varchar(100) DEFAULT NULL,
+  `primer_apellido` varchar(100) DEFAULT NULL,
   `segundo_apellido` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_persona`)
 );
@@ -161,3 +161,4 @@ CREATE TABLE if not exists `carga` (
   `detalle` varchar(200),
   PRIMARY KEY (`id_carga`)  
 );
+  
