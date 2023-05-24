@@ -23,4 +23,8 @@ public class PersonaController {
 	public List<Persona> getPersonaById(@PathVariable Long id) {
 		return personaRepository.getPersonaById(id);
 	}
+	@GetMapping("/persona/rut/{rut}")
+	public List<Persona> getPersonaByRut(@PathVariable Long rut) {
+		return personaRepository.getPersonaByRut(rut);
+	}
 }
