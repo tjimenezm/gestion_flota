@@ -55,11 +55,8 @@
               "buildOptimizer": false,
               "optimization": {
                 "scripts": true,
-                "styles": {
-                  "minify": false,
-                  "inlineCritical": true
-                },
-                "fonts": true
+                "styles": true,
+                "fonts": false
               },
               "outputHashing": "all"
             }
@@ -152,7 +149,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "scss"
+      "style": "scss"
     },
     "@schematics/angular:directive": {
       "prefix": "app"

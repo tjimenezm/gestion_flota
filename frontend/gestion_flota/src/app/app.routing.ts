@@ -13,8 +13,17 @@ export const AppRoutes: Routes = [
     children: [
         {
       path: '',
-      loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(x => x.AdminLayoutModule)
-  }]},
+      loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(x => x.AdminLayoutModule),
+  },
+  {
+    path: 'vehiculos',
+    loadChildren: () => import('./modules/vehiculos/vehiculos.module').then(x => x.VehiculosModule),
+  },
+  {
+    path: 'despachos',
+    loadChildren: () => import('./modules/despachos/despachos.module').then(x => x.DespachosModule),
+  }
+  ]},
   {
     path: '**',
     redirectTo: 'dashboard'
