@@ -53,6 +53,24 @@ public class PersonaRepository {
 			personaList.add(persona);
 		});
 		return personaList;
-
 	}
+	public List<Persona> getPersonaByRut(Long rut) {
+		String sql = "select id_persona,run     ,dv,nombre   ,primer_apellido,segundo_apellido\r\n"
+				+ "from persona where run = "+rut+" ;";
+		List<Persona> personaList = new ArrayList<Persona>();
+		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
+		rows.forEach(row -> {
+			Persona persona = new Persona();
+			Long persona_id = ((Number)row.get("id_persona")).longValue();
+			persona.setIdPersona((int)persona_id.intValue());
+			persona.setRun(((Number)row.get("run")).intValue());
+			persona.setDv((String)row.get("dv"));
+			persona.setNombre((String)row.get("nombre"));
+			persona.setPrimerApellido((String)row.get("primer_apellido"));
+			persona.setSegundoApellido((String)row.get("primer_apellido"));
+			personaList.add(persona);
+		});
+		return personaList;
+	}
+
 }
