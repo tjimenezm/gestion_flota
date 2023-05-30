@@ -31,7 +31,5 @@ public class SolicitudRepository {
 		return solicitudList;
 
 	}
-	
-	
-
 }
+
