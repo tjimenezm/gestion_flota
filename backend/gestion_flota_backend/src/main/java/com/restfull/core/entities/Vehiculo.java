@@ -1,21 +1,21 @@
 package com.restfull.core.entities;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Vehiculo {
     private int idVehiculo;
     private String patente;
     private String numeroMotor;
-    private LocalDateTime fechaRevisionTecnica;
+    private Date fechaRevisionTecnica;
     private String marca;
     private int anio;
     private String modelo;
     private String consecionario;
     private String aseguradora;
     private String poliza;
-    private LocalDateTime fechaPoliza;
-    private LocalDateTime fechaIngreso;
-    private LocalDateTime fechaBaja;
+    private Date fechaPoliza;
+    private Date fechaIngreso;
+    private Date fechaBaja;
     private String tipo;
     private String estado;
 
@@ -24,9 +24,9 @@ public class Vehiculo {
     }
 
     // Constructor con parámetros
-    public Vehiculo(int idVehiculo, String patente, String numeroMotor, LocalDateTime fechaRevisionTecnica, String marca,
+    public Vehiculo(int idVehiculo, String patente, String numeroMotor, Date fechaRevisionTecnica, String marca,
                     int anio, String modelo, String consecionario, String aseguradora, String poliza,
-                    LocalDateTime fechaPoliza, LocalDateTime fechaIngreso, LocalDateTime fechaBaja, String tipo,
+                    Date fechaPoliza, Date fechaIngreso, Date fechaBaja, String tipo,
                     String estado) {
         this.idVehiculo = idVehiculo;
         this.patente = patente;
@@ -70,11 +70,11 @@ public class Vehiculo {
         this.numeroMotor = numeroMotor;
     }
 
-    public LocalDateTime getFechaRevisionTecnica() {
+    public Date getFechaRevisionTecnica() {
         return fechaRevisionTecnica;
     }
 
-    public void setFechaRevisionTecnica(LocalDateTime fechaRevisionTecnica) {
+    public void setFechaRevisionTecnica(Date fechaRevisionTecnica) {
         this.fechaRevisionTecnica = fechaRevisionTecnica;
     }
 
@@ -126,26 +126,26 @@ public class Vehiculo {
         this.poliza = poliza;
     }
 
-    public LocalDateTime getFechaPoliza() {
+    public Date getFechaPoliza() {
     	return fechaPoliza;
     }
-    public void setFechaPoliza(LocalDateTime fechaPoliza) {
+    public void setFechaPoliza(Date fechaPoliza) {
         this.fechaPoliza = fechaPoliza;
     }
 
-    public LocalDateTime getFechaIngreso() {
+    public Date getFechaIngreso() {
         return fechaIngreso;
     }
 
-    public void setFechaIngreso(LocalDateTime fechaIngreso) {
+    public void setFechaIngreso(Date fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
     }
 
-    public LocalDateTime getFechaBaja() {
+    public Date getFechaBaja() {
         return fechaBaja;
     }
 
-    public void setFechaBaja(LocalDateTime fechaBaja) {
+    public void setFechaBaja(Date fechaBaja) {
         this.fechaBaja = fechaBaja;
     }
 
