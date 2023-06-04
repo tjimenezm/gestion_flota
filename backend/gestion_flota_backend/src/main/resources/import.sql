@@ -2,3 +2,7 @@ INSERT INTO asignar_administrativos (nombre, apellido, patente, estado, create_a
 INSERT INTO asignar_administrativos (nombre, apellido, patente, estado, create_at) VALUES('Eddie', 'Vasquez', 'AMDS-12','Asignado' , '2023-01-01');
 INSERT INTO registrar_salidas ( salida, patente, estado, create_at) VALUES('si', 'VKCG-45', 'normal','2023-01-01');
 INSERT INTO registrar_salidas ( salida, patente, estado, create_at) VALUES('no', 'AMDS-13', 'normal','1900-01-01');
+INSERT INTO planificacion (conductor_id,camion_id,fecha_creacion,fecha_planificacion,hora_salida,hora_retorno,estado,origen, destino) VALUES (100001, 200001, 04-06-2023,'05-06-2023','09:00', '12:00', 'Planificado', 'DANCO', 'JUMBO LAS CONDES' );
+INSERT INTO planificacion (conductor_id,camion_id,fecha_creacion,fecha_planificacion,hora_salida,hora_retorno,estado,origen, destino) VALUES (100002, 200052, '04-06-2023','05-06-2023','09:00', '12:00', 'En ruta', 'SCHENKER', 'JUMBO LAS CONDES' );
+INSERT INTO planificacion (conductor_id,camion_id,fecha_creacion,fecha_planificacion,hora_salida,hora_retorno,estado,origen, destino) VALUES (100002, 200045, '05-06-2023','06-06-2023','09:00', '12:00', 'Finalizado', 'SCHENKER', 'LIDER EL PEÑON' );
+INSERT INTO planificacion (conductor_id,camion_id,fecha_creacion,fecha_planificacion,hora_salida,hora_retorno,estado,origen, destino) VALUES (100045, 200053, '05-06-2023','06-06-2023','09:00', '12:00', 'Esperando carga', 'DANCO', 'JUMBO LAS CONDES' );
